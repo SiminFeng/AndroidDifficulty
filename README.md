@@ -15,5 +15,5 @@ Andorid学习过程中的重难点整理，包括个人的一些读书笔记和�
 
 
 #目录
-01.[理解JVM】JVM内存分块和垃圾收集算法（HotSpot）](https://github.com/miomin/AndroidDifficulty/blob/master/%E3%80%90%E7%90%86%E8%A7%A3JVM%E3%80%91JVM%E5%86%85%E5%AD%98%E5%88%86%E5%9D%97%E5%92%8C%E5%9E%83%E5%9C%BE%E6%94%B6%E9%9B%86%E7%AE%97%E6%B3%95%EF%BC%88HotSpot%EF%BC%89.md)
+[01【深入理解JVM】JVM内存分块和垃圾收集算法（HotSpot）](https://github.com/miomin/AndroidDifficulty/blob/master/%E3%80%90%E7%90%86%E8%A7%A3JVM%E3%80%91JVM%E5%86%85%E5%AD%98%E5%88%86%E5%9D%97%E5%92%8C%E5%9E%83%E5%9C%BE%E6%94%B6%E9%9B%86%E7%AE%97%E6%B3%95%EF%BC%88HotSpot%EF%BC%89.md)
 
