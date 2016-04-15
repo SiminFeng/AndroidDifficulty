@@ -6,16 +6,21 @@
 
 【参考资料】
 1、http://developer.android.com/training/improving-layouts/optimizing-layout.html
+
 2、何红辉前辈 -- [《Android开发进阶----从小工到专家》](1)
+
 3、Herve Guihot -- [《Pro Android Apps Performance Optimization》](1)
+
 
 
 ----------
 
 ##一、优化Layout层级
+
 　　APP的每个View和Layout都需要经过Measure、Layout和Draw三个过程，如果布局层级过深，这个过程就会非常耗时。所以减少Layout的层级是优化布局性能的一个重要手段。本文将介绍通过include、merge、ViewStub三种手段来进行Android布局层级优化。
 
 推荐一个布局检测工具：
+
 　　***Hierarchy Viewer ：***能够在程序运行时分析 Layout，可以用这个工具找到 Layout 的性能瓶颈。
 　　
 
@@ -26,6 +31,7 @@
 ##二、include布局重用
 
 　　在复杂的UI界面中，经常会遇到多个界面含有一些相同子布局的情况，如果我们分别定义这些公共元素，如果需要修改，就必须到每个布局文件中分别修改，增加了大量的维护成本。
+　　
 　　include标签可以帮助我们把公共元素提取出来，作为一个子布局，在每一个需要共用这个子布局的布局中通过include引入即可。
 
 ```
