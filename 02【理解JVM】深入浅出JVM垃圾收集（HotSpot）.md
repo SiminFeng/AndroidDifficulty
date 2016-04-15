@@ -1,5 +1,8 @@
 ***博客地址：***http://blog.csdn.net/mxm691292118/article/details/51006010
+
 如果对你有帮助，欢迎star和follow哟，保持关注，持续更新。
+
+----------
 
 ***引言***：上一篇博文提到JVM运行时的内存分块和GC的基本思想及算法，在GC的道路上越走越远，接下来要做的就是 [深入浅出JVM的垃圾收集机制](1)。
 
@@ -115,3 +118,9 @@
 
  - 如果在Eden中经过第一次Minor GC后还能存活，并且Survivor可以存放该对象，就将对象移入Survivor，Age设为1，在Survivor中每经过一次Minor GC，Age都会加1。（可以配置Age阈值）
  - 动态对象年龄判定：没必要一定等到Age达到阈值，如果Survivor中相同Age的对象的大小总和大于Survivor的一半，Age大于等于该Age的对象都进入老年区。
+
+----------
+
+***博客地址：***http://blog.csdn.net/mxm691292118/article/details/50996938
+
+如果对你有帮助，欢迎star和follow哟，保持关注，持续更新。
