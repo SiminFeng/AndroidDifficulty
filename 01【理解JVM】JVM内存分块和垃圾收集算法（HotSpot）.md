@@ -1,5 +1,9 @@
 ***博客地址：***http://blog.csdn.net/mxm691292118/article/details/50996938
 
+如果对你有帮助，欢迎star和follow哟，保持关注，持续更新。
+
+----------
+
 ##一、JVM内存分块
 Java虚拟机在执行Java程序时，会将该过程中所管理的内存划分成不同的数据块，这些区域有各自不同的用途和生命周期，参考《深入理解JVM虚拟机》，总结出以下结论：
 
@@ -108,3 +112,10 @@ public final class Integer extends Number implements Comparable<Integer> {
 
  - **（4）分代收集算法（Generational Collection）**：
   - 不是一种算法思想，而是把内存划分为[新生代](1)和[老生代](1)，对不同区域采用不同的垃圾收集算法。
+ 
+----------
+
+
+***博客地址：***http://blog.csdn.net/mxm691292118/article/details/50996938
+
+如果对你有帮助，欢迎star和follow哟，保持关注，持续更新。
