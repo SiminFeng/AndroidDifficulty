@@ -5,7 +5,7 @@
 ----------
 
 ##一、JVM内存分块
-Java虚拟机在执行Java程序时，会将该过程中所管理的内存划分成不同的数据块，这些区域有各自不同的用途和生命周期，参考《深入理解JVM虚拟机》，总结出以下结论：
+每一个进程会对应一个JVM实例，JVM在执行Java程序时，会将该进程获取到的内存划分成不同的数据块，这些区域有各自不同的用途和生命周期，参考《深入理解JVM虚拟机》，总结出以下结论：
 
  - **（1）PC**：每个线程有独立的PC，PC的值指向程序即将执行的下一条指令的地址。
  - **（2）JVM Stack**：每个线程都拥有一个，每个方法在执行时都会创建一个栈帧，存储所有的局部变量，返回地址等等。（局部变量的对象的引用存在Stack中，对象实例存在Java Heap中）
@@ -13,6 +13,8 @@ Java虚拟机在执行Java程序时，会将该过程中所管理的内存划分
  - **（4）Java Heap**：所有线程共享，存储类的所有成员变量（成员变量的对象的引用和实例都在Java Heap中）。Java Heap是GC的主要区域。
  - **（5）静态存储区（方法区）**：所有线程共享，存储已经被JVM加载的Class的信息、常量、static变量、编译成的字节码。
  - **（6）Native Heap/直接内存区**：直接内存区不是 JVM 管理的内存区域的一部分，而是其之外的。NIO就是使用Native函数库直接分配Native heap的内存，通过一个存储在Java heap中的DirectByteBuffer对象作为对该块Native heap内存的引用进行操作，提高流畅度，避免Java heap和Native heap中来回复制数据。Native heap的分配不受Java heap大小的限制，但是收到本机总内存的限制。（[在Android3.0之前，Bitmap存储在Native heap中，Android3.0之后，存储在Java heap中](1)）
+
+ - 在Android2.x中，Native heap会分配到每个JVM实例；在Andorid3.0以后，所有进程共享同一个Native heap，大小只受机器总内存（包括RAM以及SWAP区或者分页文件）的大小的影响。
 
 ![这里写图片描述](http://img.blog.csdn.net/20160329120256624)
 
